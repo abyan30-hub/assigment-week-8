@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - Falah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Personal Expense Tracker</h2>
+        
+        <div class="card">
+            <div class="form-group">
+                <input type="text" id="namaExp" placeholder="Nama pengeluaran">
+                <input type="number" id="nominalExp" placeholder="Nominal (Rp)">
+                <select id="kategoriExp">
+                    <option value="Makan">🍔 Makan</option>
+                    <option value="Transportasi">🚗 Transportasi</option>
+                    <option value="Belanja">🛍️ Belanja</option>
+                    <option value="Lainnya">✨ Lainnya</option>
+                </select>
+                <button id="btnTambah" onclick="tambahData()">Tambah Data</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Riwayat Transaksi</h3>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Nominal</th>
+                            <th>Kategori</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelBody"></tbody>
+                </table>
+            </div>
+            <div class="total-section">
+                <strong>Total Seluruh: Rp <span id="totalTampil">0</span></strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
